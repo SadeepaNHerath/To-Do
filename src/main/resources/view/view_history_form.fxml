@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.iCET.controller.ViewHistoryFormCalculator">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="38.0" prefHeight="44.0" prefWidth="320.0" style="-fx-background-color: #6D9886; -fx-background-radius: 20px;" text="Task History" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblTask" layoutX="43.0" layoutY="175.0" prefHeight="590.0" prefWidth="715.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="98.0" text="Task ID" />
+          <TableColumn fx:id="colTitle" prefWidth="337.0" text="Task Title" />
+            <TableColumn fx:id="colStatus" minWidth="0.0" prefWidth="128.0" text="Active Status" />
+            <TableColumn fx:id="colDate" prefWidth="151.0" text="Completion Date" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="dtpck" layoutX="306.0" layoutY="126.0" />
+      <JFXButton fx:id="btnSearch" layoutX="535.0" layoutY="123.0" onAction="#btnSearchOnAction" style="-fx-background-color: #4A90E2; -fx-background-radius: 10px;" text="Search" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnBack" layoutX="58.0" layoutY="120.0" onAction="#btnBackOnAction" prefHeight="40.0" prefWidth="87.0" style="-fx-background-radius: 10px; -fx-border-color: #FFFFFF; -fx-border-radius: 10px;" text="← Back" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
