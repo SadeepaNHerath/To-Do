@@ -17,7 +17,8 @@ public class Starter extends Application {
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/dash_form.fxml"))));
         primaryStage.setTitle("Task-Track");
-        //primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("img/logo.png")));
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/img/logo.png")));
+        primaryStage.setResizable(false);
         primaryStage.show();
         ViewHistoryFormCalculator.getStage(primaryStage);
         DashFormController.getStage(primaryStage);

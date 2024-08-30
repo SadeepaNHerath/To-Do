@@ -65,9 +65,9 @@ public class ViewHistoryFormCalculator implements Initializable {
         tblTask.setItems(taskObservableList);
 
         try {
-            String SQL = "SELECT * FROM Tasks WHERE task_status='Done'";
+            String sql = "SELECT * FROM Tasks WHERE task_status='Done'";
             Connection connection = db.DBConnection.getInstance().getConnection();
-            PreparedStatement psTm = connection.prepareStatement(SQL);
+            PreparedStatement psTm = connection.prepareStatement(sql);
             ResultSet resultSet = psTm.executeQuery();
             while (resultSet.next()){
                 Task task =new Task(
@@ -100,9 +100,9 @@ public class ViewHistoryFormCalculator implements Initializable {
         tblTask.setItems(taskObservableList);
 
         try {
-            String SQL = "SELECT * FROM Tasks WHERE task_status='Done' AND completion_date='" + dtpck.getValue().toString() + "'";
+            String sql = "SELECT * FROM Tasks WHERE task_status='Done' AND completion_date='" + dtpck.getValue().toString() + "'";
             Connection connection = db.DBConnection.getInstance().getConnection();
-            PreparedStatement psTm = connection.prepareStatement(SQL);
+            PreparedStatement psTm = connection.prepareStatement(sql);
             ResultSet resultSet = psTm.executeQuery();
             while (resultSet.next()){
                 Task task =new Task(
