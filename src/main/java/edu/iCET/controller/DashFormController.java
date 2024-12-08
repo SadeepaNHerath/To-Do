@@ -87,7 +87,7 @@ public class DashFormController implements Initializable {
         }
 
         lstToDo.setCellFactory(new Callback<>() {
-            @Override
+                @Override
             public ListCell<String> call(ListView<String> param) {
                 return new ListCell<>() {
                     private final HBox hbox = new HBox();
